@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>jingzhou</key>
+	<dict/>
+	<key>shashi</key>
+	<dict>
+		<key>jiangbian</key>
+		<integer>2</integer>
+		<key>bianhe</key>
+		<integer>3</integer>
+		<key>gongyuan</key>
+		<integer>2</integer>
+		<key>jiexiang</key>
+		<integer>5</integer>
+		<key>niaokan</key>
+		<integer>1</integer>
+	</dict>
+</dict>
+</plist>
