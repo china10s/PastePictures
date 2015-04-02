@@ -7,25 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewInfo.h"
+#import "HPublic.h"
 
-@protocol VCPicturesSwitchDelegate <NSObject>
-- (void)PicSwitchBack;
-@end
-
-
-@interface VCPictures : UIViewController<UIScrollViewDelegate>
+@interface VCPictures : UIViewController<UIScrollViewDelegate,VCPicturesSwitchDelegate>
 @property (nonatomic,strong) UIImageView*                   CtrlViewLeft;
 @property (nonatomic,strong) UIImageView*                   CtrlViewMiddle;
 @property (nonatomic,strong) UIImageView*                   CtrlViewRight;
 @property (nonatomic,strong) UIPageControl*                 CtrlPage;
 @property (nonatomic,strong) UIScrollView*                  CtrlScroll;
 @property (nonatomic,strong) UILabel*                       CtrlLabel;
+@property (nonatomic,strong) ViewInfo*                      CtrlViewInfo;
 @property (nonatomic,strong) NSMutableArray*                nImagesArry;
 @property (nonatomic,assign) CGRect                         rcScreen;
 @property (nonatomic,assign) NSInteger                      iCurIndex;
 @property (nonatomic,assign) NSInteger                      iImageNum;
 @property (nonatomic,retain) id<VCPicturesSwitchDelegate>   SwitchDelegate;
 
+//初始化self.view
+- (void)IniSelfView;
 //初始化缩放窗控件
 - (void)IniUiScroll;
 //初始化页面控件

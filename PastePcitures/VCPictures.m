@@ -17,7 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    _rcScreen = [UIScreen mainScreen].bounds;
+    _nImagesArry = [[NSMutableArray alloc] init];
+    [self IniSelfView];
+    [self IniUiScroll];
+    [self IniUiPage];
+    [self IniUiImage];
+    [self IniUiLable];
+    [self IniViewInfo];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,13 +32,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{/*
     _rcScreen = [UIScreen mainScreen].bounds;
     _nImagesArry = [[NSMutableArray alloc] init];
+    [self IniSelfView];
     [self IniUiScroll];
     [self IniUiPage];
     [self IniUiImage];
     [self IniUiLable];
+    [self IniViewInfo];*/
     [super viewWillAppear:animated];
 }
 
@@ -55,12 +64,19 @@
     _iCurIndex = 0;
     [self reloadImage];
 }
-/*
-- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index{
-    _img =[UIImage imageNamed:[_ImagesArry objectAtIndex:index]];
-    return _img;
+
+- (void)IniSelfView{
+    self.view.frame = _rcScreen;
 }
-*/
+
+- (void)IniViewInfo{
+    _CtrlViewInfo = [[ViewInfo alloc]initWithFrame:_rcScreen superView:self.view];
+    _CtrlViewInfo.delBack = self;
+}
+
+- (void)PicSwitchBack{
+    [_SwitchDelegate PicSwitchBack];
+}
 
 //初始化缩放窗控件
 - (void)IniUiScroll{
@@ -70,6 +86,7 @@
     [_CtrlScroll setContentOffset:CGPointMake(_rcScreen.size.width, 0)];
     _CtrlScroll.pagingEnabled = YES;
     _CtrlScroll.showsHorizontalScrollIndicator=NO;
+    [_CtrlScroll setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:_CtrlScroll];
 }
 

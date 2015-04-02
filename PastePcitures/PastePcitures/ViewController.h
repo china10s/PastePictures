@@ -16,5 +16,5 @@
 @property (nonatomic,strong)VCPictures* vcPictures;
 
 //切换controllor
-- (void)ReplaceControllor:(ViewController*)fromCont toCont:(ViewController*)toCont finishedBlock:(void(^)(void))finishedBlock ;
+- (void)ReplaceControllor:(ViewController*)fromCont toCont:(ViewController*)toCont leftTurn:(BOOL)leftTurn  finishedBlock:(void(^)(void))finishedBlock ;
 @end

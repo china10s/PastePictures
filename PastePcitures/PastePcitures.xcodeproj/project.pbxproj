@@ -33,6 +33,7 @@
 		B6B800B01AC9FA15007E99B0 /* shashi_niaokan1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6B8009D1AC9FA15007E99B0 /* shashi_niaokan1.jpg */; };
 		B6B800B11AC9FA15007E99B0 /* shashi_xuexiao1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6B800A01AC9FA15007E99B0 /* shashi_xuexiao1.jpg */; };
 		B6B800B21AC9FA15007E99B0 /* shashi_yundong1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6B800A21AC9FA15007E99B0 /* shashi_yundong1.jpg */; };
+		B6C54A891ACC918F00208D3D /* ViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C54A881ACC918F00208D3D /* ViewInfo.m */; };
 		B6DF47A31AC853F000ECD60E /* CDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF47A21AC853F000ECD60E /* CDataReader.m */; };
 		B6DF47A51AC8946000ECD60E /* VCSelected.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DF47A41AC8946000ECD60E /* VCSelected.xib */; };
 		B6DF47A71AC89E4B00ECD60E /* Dis2Sce2Pic.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6DF47A61AC89E4B00ECD60E /* Dis2Sce2Pic.plist */; };
@@ -89,6 +90,9 @@
 		B6B8009D1AC9FA15007E99B0 /* shashi_niaokan1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shashi_niaokan1.jpg; sourceTree = "<group>"; };
 		B6B800A01AC9FA15007E99B0 /* shashi_xuexiao1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shashi_xuexiao1.jpg; sourceTree = "<group>"; };
 		B6B800A21AC9FA15007E99B0 /* shashi_yundong1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shashi_yundong1.jpg; sourceTree = "<group>"; };
+		B6C54A871ACC918F00208D3D /* ViewInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewInfo.h; sourceTree = "<group>"; };
+		B6C54A881ACC918F00208D3D /* ViewInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewInfo.m; sourceTree = "<group>"; };
+		B6C54A8A1ACCB19600208D3D /* HPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPublic.h; sourceTree = "<group>"; };
 		B6DF47A11AC853F000ECD60E /* CDataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataReader.h; sourceTree = "<group>"; };
 		B6DF47A21AC853F000ECD60E /* CDataReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataReader.m; sourceTree = "<group>"; };
 		B6DF47A41AC8946000ECD60E /* VCSelected.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCSelected.xib; sourceTree = "<group>"; };
@@ -135,9 +139,33 @@
 			name = DataPersist;
 			sourceTree = "<group>";
 		};
+		B60023E01ACB733D003E1165 /* shashi */ = {
+			isa = PBXGroup;
+			children = (
+				B6B8008B1AC9FA15007E99B0 /* 192032z9m760gunv9h4nv7.jpg */,
+				B6B8008C1AC9FA15007E99B0 /* bianhe */,
+				B6B800901AC9FA15007E99B0 /* gongyuan */,
+				B6B800931AC9FA15007E99B0 /* jiangbian */,
+				B6B800961AC9FA15007E99B0 /* jiexiang */,
+				B6B8009C1AC9FA15007E99B0 /* niaokan */,
+				B6B8009E1AC9FA15007E99B0 /* shashang */,
+				B6B8009F1AC9FA15007E99B0 /* xuexiao */,
+				B6B800A11AC9FA15007E99B0 /* yundong */,
+			);
+			name = shashi;
+			sourceTree = "<group>";
+		};
+		B60023E11ACB7351003E1165 /* jingzhou */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = jingzhou;
+			sourceTree = "<group>";
+		};
 		B632E0F81AC83AB20075BD92 = {
 			isa = PBXGroup;
 			children = (
+				B6C54A8A1ACCB19600208D3D /* HPublic.h */,
 				B60023DF1ACB719C003E1165 /* DataPersist */,
 				B6B8008A1AC9FA15007E99B0 /* Resources */,
 				B6DF47B21AC8C22A00ECD60E /* Frameworks */,
@@ -206,6 +234,8 @@
 				B632E12F1AC83D530075BD92 /* VCPictures.h */,
 				B632E1301AC83D530075BD92 /* VCPictures.m */,
 				B632E1311AC83D530075BD92 /* VCPictures.xib */,
+				B6C54A871ACC918F00208D3D /* ViewInfo.h */,
+				B6C54A881ACC918F00208D3D /* ViewInfo.m */,
 			);
 			name = VCPictures;
 			sourceTree = "<group>";
@@ -223,15 +253,8 @@
 		B6B8008A1AC9FA15007E99B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B6B8008B1AC9FA15007E99B0 /* 192032z9m760gunv9h4nv7.jpg */,
-				B6B8008C1AC9FA15007E99B0 /* bianhe */,
-				B6B800901AC9FA15007E99B0 /* gongyuan */,
-				B6B800931AC9FA15007E99B0 /* jiangbian */,
-				B6B800961AC9FA15007E99B0 /* jiexiang */,
-				B6B8009C1AC9FA15007E99B0 /* niaokan */,
-				B6B8009E1AC9FA15007E99B0 /* shashang */,
-				B6B8009F1AC9FA15007E99B0 /* xuexiao */,
-				B6B800A11AC9FA15007E99B0 /* yundong */,
+				B60023E11ACB7351003E1165 /* jingzhou */,
+				B60023E01ACB733D003E1165 /* shashi */,
 			);
 			name = Resources;
 			path = resources;
@@ -379,9 +402,11 @@
 				TargetAttributes = {
 					B632E1001AC83AB20075BD92 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = LV9W69YMCC;
 					};
 					B632E1191AC83AB20075BD92 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = LV9W69YMCC;
 						TestTargetID = B632E1001AC83AB20075BD92;
 					};
 				};
@@ -450,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6DF47A31AC853F000ECD60E /* CDataReader.m in Sources */,
+				B6C54A891ACC918F00208D3D /* ViewInfo.m in Sources */,
 				B632E1321AC83D530075BD92 /* VCPictures.m in Sources */,
 				B6DF47AD1AC8BCAE00ECD60E /* FeBasicAnimationBlock.m in Sources */,
 				B632E10D1AC83AB20075BD92 /* ViewController.m in Sources */,
@@ -515,6 +541,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: lin zhu (Y4MH57KEA8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -535,6 +562,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "75f31955-7787-4922-a94b-968ab5226d97";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -556,6 +584,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: lin zhu (Y4MH57KEA8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -569,6 +598,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "75f31955-7787-4922-a94b-968ab5226d97";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -578,9 +608,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PastePcitures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -588,9 +621,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PastePcitures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -598,6 +634,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -609,6 +647,7 @@
 				INFOPLIST_FILE = PastePcituresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PastePcitures.app/PastePcitures";
 			};
 			name = Debug;
@@ -617,6 +656,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -624,6 +665,7 @@
 				INFOPLIST_FILE = PastePcituresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PastePcitures.app/PastePcitures";
 			};
 			name = Release;
