@@ -25,6 +25,7 @@
     [self IniUiImage];
     [self IniUiLable];
     [self IniViewInfo];
+    [self IniGesture];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,6 +56,15 @@
 }
 */
 
+//初始化事件
+- (void)IniGesture{
+    _GestsingleTapRecon = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HandleSingleTap:)];
+    _GestsingleTapRecon.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:_GestsingleTapRecon];
+}
+
+
+//设置当前图片列
 - (void)SetCurrentPicture:(NSString*)strPicMainName nPicNum:(NSInteger)nPicNum{
     [_nImagesArry removeAllObjects];
     for (int i = 0; i < nPicNum; ++i) {
@@ -82,11 +92,11 @@
 - (void)IniUiScroll{
     _CtrlScroll = [[UIScrollView alloc] initWithFrame:_rcScreen];
     _CtrlScroll.delegate = self;
-    _CtrlScroll.contentSize=CGSizeMake(_rcScreen.size.width*3,_rcScreen.size.height);
+    _CtrlScroll.contentSize = CGSizeMake(_rcScreen.size.width*3,_rcScreen.size.height);
     [_CtrlScroll setContentOffset:CGPointMake(_rcScreen.size.width, 0)];
     _CtrlScroll.pagingEnabled = YES;
     _CtrlScroll.showsHorizontalScrollIndicator=NO;
-    [_CtrlScroll setBackgroundColor:[UIColor grayColor]];
+    //[_CtrlScroll setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:_CtrlScroll];
 }
 
@@ -99,12 +109,23 @@
     [_CtrlScroll addSubview:_CtrlViewLeft];
     
     //中间ImageView
-    //_CtrlViewMiddle = [[UIImageView alloc] initWithFrame:_rcScreen];
+    _img = [[ViewScrollImage alloc] initWithFrame:_rcScreen];
+    [_CtrlScroll addSubview:_img];
+    /*
     _CtrlViewMiddle = [[UIImageView alloc] initWithFrame:CGRectMake(_rcScreen.size.width, 0,
                                                                   _rcScreen.size.width, _rcScreen.size.height)];
     _CtrlViewMiddle.contentMode=UIViewContentModeScaleAspectFit;
-    [_CtrlScroll addSubview:_CtrlViewMiddle];
-    
+    //[_CtrlScroll addSubview:_CtrlViewMiddle];
+    _CtrlScrollTmp = [[UIScrollView alloc] initWithFrame:CGRectMake(_rcScreen.size.width, 0,
+                                                                    _rcScreen.size.width, _rcScreen.size.height)];
+    _CtrlScrollTmp.contentOffset =CGPointZero;
+    _CtrlScrollTmp.contentSize=_rcScreen.size;
+    _CtrlScrollTmp.backgroundColor = [UIColor redColor];
+    _CtrlScrollTmp.contentMode = UIViewContentModeScaleAspectFit;
+    _CtrlScrollTmp.delegate = self;
+        [_CtrlScroll addSubview:_CtrlScrollTmp];
+    [_CtrlScrollTmp addSubview:_CtrlViewMiddle];
+    */
     //右边ImageView
     _CtrlViewRight = [[UIImageView alloc] initWithFrame:CGRectMake(2*_rcScreen.size.width, 0,
                                                                   _rcScreen.size.width, _rcScreen.size.height)];
@@ -115,7 +136,6 @@
         _CtrlViewMiddle.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:0]];
         _CtrlViewRight.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:1]];
     }
-
 }
 
 //初始化图片框
@@ -135,7 +155,6 @@
     [self reloadImage];
     //移动到正中位置
     [_CtrlScroll setContentOffset:CGPointMake(_rcScreen.size.width, 0)];
-    
 }
 
 - (void)reloadImage{
@@ -151,9 +170,16 @@
     _CtrlViewMiddle.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:_iCurIndex]];
     _CtrlViewLeft.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:ileftImageIndex]];
     _CtrlViewRight.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:iRightImageIndex]];
+    
+    _img.CtrlImgView.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:_iCurIndex]];
+    CGRect rect1= _img.frame;
+    CGRect rect2= _img.CtrlImgView.frame;
+    CGRect rect3= _img.CtrlScrollView.frame;
 }
 
-
+- (void)HandleSingleTap:(UITapGestureRecognizer*)Reco{
+    [_CtrlViewInfo ClickToVisableChange];
+}
 
 
 

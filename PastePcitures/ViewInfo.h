@@ -14,7 +14,7 @@
 
 
 @interface ViewInfo:NSObject
-
+@property (nonatomic,assign)BOOL         isBarShow;//是否显示上下提示框
 @property (nonatomic,weak)UIView        *superView;
 @property (nonatomic,strong)UIView      *ctrlUpBar;
 @property (nonatomic,strong)UIView      *ctrlDownBar;
@@ -28,4 +28,5 @@
 - (void)IniLabel;
 - (void)IniButton;
 - (void)ButtonClick:(id)sender;
+- (void)ClickToVisableChange;
 @end

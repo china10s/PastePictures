@@ -3,7 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>jingzhou</key>
-	<dict/>
+	<dict>
+		<key>xuanmiaoguan</key>
+		<integer>1</integer>
+		<key>kaiyuanguan</key>
+		<integer>1</integer>
+		<key>shangchang</key>
+		<integer>1</integer>
+		<key>beidamen</key>
+		<integer>9</integer>
+	</dict>
 	<key>shashi</key>
 	<dict>
 		<key>jiangbian</key>
@@ -11,10 +20,16 @@
 		<key>bianhe</key>
 		<integer>3</integer>
 		<key>gongyuan</key>
-		<integer>2</integer>
+		<integer>3</integer>
 		<key>jiexiang</key>
-		<integer>5</integer>
+		<integer>9</integer>
 		<key>niaokan</key>
+		<integer>2</integer>
+		<key>shangshe</key>
+		<integer>7</integer>
+		<key>xuexiao</key>
+		<integer>1</integer>
+		<key>yundong</key>
 		<integer>1</integer>
 	</dict>
 </dict>

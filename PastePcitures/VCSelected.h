@@ -26,5 +26,5 @@
 - (void)ValChanged:(UISegmentedControl*)sender;
 - (void)SelectDistrict:(NSInteger)intDistrictIndex;
 - (void)CreateScenes:(NSString*)strSelDistrict;
-- (void)viewDidLoad ;
+- (void)viewDidLoad;
 @end

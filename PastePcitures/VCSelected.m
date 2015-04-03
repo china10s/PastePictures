@@ -36,56 +36,21 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[_CtrlScroll]-40-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_CtrlScroll)]];
     [_CtrlScroll setTranslatesAutoresizingMaskIntoConstraints:NO];
     _CtrlScroll.contentOffset = CGPointMake(0,0);
+    _CtrlScroll.showsVerticalScrollIndicator = FALSE;
     
 }
 
 - (id)init{
-    //_arryDistrict = [CDataReader GetCity];
-    self = [super init];;
-    /*_CtrlSegment = [[UISegmentedControl alloc] initWithItems:_arryDistrict];
-    _CtrlSegment.selectedSegmentIndex = 0;
-
-    [self.view addSubview:_CtrlSegment];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_CtrlSegment]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_CtrlSegment)]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[_CtrlSegment]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_CtrlSegment)]];
-    [_CtrlSegment setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [_CtrlSegment addTarget:self action:@selector(ValChanged:) forControlEvents:UIControlEventValueChanged];
-    
-    _CtrlScroll = [[UIScrollView alloc] init];
-    [self.view addSubview:_CtrlScroll];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[_CtrlScroll]-20-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_CtrlScroll)]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[_CtrlScroll]-40-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_CtrlScroll)]];
-    [_CtrlScroll setTranslatesAutoresizingMaskIntoConstraints:NO];
-    _CtrlScroll.contentOffset = CGPointMake(0,0);*/
-    return self;
+    return [super init];
 }
 
 //初始化
 - (void)viewWillAppear:(BOOL)animated{
     _arryDistrict = [CDataReader GetCity];
     if (_arryDistrict && _arryDistrict.count  > 0) {
-        /*
-        _CtrlSegment = [[UISegmentedControl alloc] initWithItems:_arryDistrict];
-        _CtrlSegment.selectedSegmentIndex = 0;
-
-        [self.view addSubview:_CtrlSegment];
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_CtrlSegment]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_CtrlSegment)]];
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[_CtrlSegment]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_CtrlSegment)]];
-        [_CtrlSegment setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [_CtrlSegment addTarget:self action:@selector(ValChanged:) forControlEvents:UIControlEventValueChanged];
-        
-        _CtrlScroll = [[UIScrollView alloc] init];
-        [self.view addSubview:_CtrlScroll];
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[_CtrlScroll]-20-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_CtrlScroll)]];
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[_CtrlScroll]-40-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_CtrlScroll)]];
-        [_CtrlScroll setTranslatesAutoresizingMaskIntoConstraints:NO];
-        _CtrlScroll.contentOffset = CGPointMake(0,0);
-        
-        //初始化第一个选项
-        [self SelectDistrict:0];*/
+        [self ValChanged:nil];
+        [super viewWillAppear:animated];
     }
-    [self SelectDistrict:0];
-    [super viewWillAppear:animated];
 }
 
 
@@ -111,7 +76,6 @@
 
 
 - (void)ValChanged:(UISegmentedControl *)sender {
-    _intScenesCount = 0;
     NSInteger selIndex = _CtrlSegment.selectedSegmentIndex;
     [self SelectDistrict:selIndex];
 }
@@ -120,8 +84,8 @@
     //清空所有按钮
     for(UIView * viewTmp in [_CtrlScroll subviews]){
         [viewTmp removeFromSuperview];
-        --_intScenesCount;
     }
+    _intScenesCount = 0;
     _strCurDicName =[_arryDistrict objectAtIndex:intDistrictIndex];
     NSMutableArray* arry = [CDataReader GetScenesOfDistrict:_strCurDicName];
     for (NSString* strTmpName in arry) {
@@ -145,12 +109,6 @@
     [a_button addTarget:self action:@selector(SceneSelected:) forControlEvents:UIControlEventTouchUpInside];
     [_CtrlScroll addSubview:a_button];
     _CtrlScroll.contentSize = CGSizeMake(_CtrlScroll.contentSize.width,_intScenesCount*(KButtonHeight+2) + KButtonHeight/2 );
-        CGRect rect = a_button.frame;
-    //[self.view addSubview:a_button];
-    //[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_button]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_button)]];
-    //[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-60-[_button]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self.view,_button)]];
-    //[_button setTranslatesAutoresizingMaskIntoConstraints:NO];
-    //[_SwitchDelegate Seleted:@"荆州" strSceneName:<#(NSString *)#>]
 }
 
 - (void)SceneSelected:(UIButton*)sender
