@@ -27,14 +27,21 @@
     @synchronized(self)
     {
         if(!reader){
+            reader = [[CDataReader alloc] init];
             NSString* strProPath = [[NSBundle mainBundle] pathForResource:@"Dis2Sce2Pic" ofType:@"plist"];
             NSFileManager * manager = [NSFileManager defaultManager];
             if(![manager fileExistsAtPath:strProPath])
             {
                 return nil;
             }
-            reader = [[CDataReader alloc] init];
             reader.dData = [[NSMutableDictionary alloc] initWithContentsOfFile:strProPath];
+            
+            strProPath = [[NSBundle mainBundle] pathForResource:@"Chinese2English" ofType:@"plist"];
+            manager = [NSFileManager defaultManager];
+            if (![manager fileExistsAtPath:strProPath]) {
+                return nil;
+            }
+            reader.dTranslator = [[NSMutableDictionary alloc] initWithContentsOfFile:strProPath];
         }
     }
     return reader;
@@ -57,7 +64,7 @@
 
 
 //获取当前城市所有景点
-+ (NSMutableArray*)GetScenesOfDistrict:(NSString*)strDisName{
++ (NSMutableArray*)GetEnScenesOfDistrict:(NSString*)strDisName{
     CDataReader* readerTmp = [CDataReader InitLoad];
     if(readerTmp)
     {
@@ -74,7 +81,7 @@
 }
 
 //获取所有城市
-+ (NSMutableArray*)GetCity{
++ (NSMutableArray*)GetCityEnName{
     CDataReader* readerTmp = [CDataReader InitLoad];
     if(readerTmp){
         NSMutableArray* arry = [[NSMutableArray alloc] init];
@@ -89,5 +96,11 @@
 
 }
 
+//中英文转换
++ (NSString*)GetChByEn:(NSString*)strEnName{
+    CDataReader* readerTmp = [CDataReader InitLoad];
+    NSString* strChName = [readerTmp.dTranslator objectForKey:strEnName];
+    return strChName;
+}
 
 @end

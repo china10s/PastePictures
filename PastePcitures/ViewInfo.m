@@ -32,8 +32,7 @@
     
     //up
     _ctrlUpBar = [[UIView alloc] init];
-    [_ctrlUpBar setBackgroundColor:[UIColor colorWithRed:47.0f/255.0f green:134.0f/255.0f blue:235.0f/255.0f alpha:1]];
-    [_ctrlUpBar setAlpha:0.3];
+    [_ctrlUpBar setBackgroundColor:[UIColor colorWithWhite:0.5f alpha:0.5f]];
     [_ctrlUpBar setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_superView addSubview:_ctrlUpBar];
     [_superView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_ctrlUpBar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_superView,_ctrlUpBar)]];
@@ -41,25 +40,27 @@
     
     //down
     _ctrlDownBar = [[UIView alloc] init];
-    [_ctrlDownBar setBackgroundColor:[UIColor colorWithRed:47.0f/255.0f green:134.0f/255.0f blue:235.0f/255.0f alpha:1]];
-    [_ctrlDownBar setAlpha:0.3];
+    [_ctrlDownBar setBackgroundColor:[UIColor colorWithWhite:0.5f alpha:0.5f]];
     [_ctrlDownBar setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_superView addSubview:_ctrlDownBar];
     [_superView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_ctrlDownBar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_superView,_ctrlDownBar)]];
-    [_superView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_ctrlDownBar(>=100)]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_superView,_ctrlDownBar)]];
+    [_superView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_ctrlDownBar(>=65)]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_superView,_ctrlDownBar)]];
 }
 
 - (void)IniLabel{
-    _ctrlLabelInfo = [[UILabel alloc] init];
+    _ctrlLabelName = [[UILabel alloc] init];
+    [_ctrlLabelName setBackgroundColor:[UIColor colorWithWhite:0 alpha:0]];
+    [_ctrlLabelName setTextColor:[UIColor colorWithWhite:1 alpha:1]];
     //KVO_strLabel
-    [self addObserver:self forKeyPath:@"strLabel" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:@"context"];
-    [_superView addSubview:_ctrlLabelInfo];
+    [_ctrlLabelName setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [_ctrlUpBar addSubview:_ctrlLabelName];
+    [_ctrlUpBar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-70-[_ctrlLabelName]-70-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_ctrlUpBar,_ctrlLabelName)]];
+    [_ctrlUpBar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[_ctrlLabelName]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_ctrlUpBar,_ctrlLabelName)]];
+    _ctrlLabelName.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)IniButton{
     _ctrlButtonReturn = [[UIButton alloc] init];
-    //[_ctrlButtonReturn setTitle:@"<" forState:UIControlStateNormal];
-    [_ctrlButtonReturn setBackgroundColor:[UIColor colorWithRed:47.0f/255.0f green:134.0f/255.0f blue:235.0f/255.0f alpha:1]];
     [_ctrlUpBar addSubview:_ctrlButtonReturn];
     [_ctrlButtonReturn setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_ctrlUpBar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[_ctrlButtonReturn(==40)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_ctrlUpBar,_ctrlButtonReturn)]];
@@ -99,6 +100,13 @@
 
     [UIView commitAnimations];
 }
+
+//显示图片名称
+- (void)SetLabelText:(NSString*)strName{
+    [_ctrlLabelName setText:strName];
+    CGRect rect1 = _ctrlLabelName.frame ;
+}
+
 @end
 
 

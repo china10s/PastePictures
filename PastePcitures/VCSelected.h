@@ -22,9 +22,9 @@
 @property (nonatomic,strong) UISegmentedControl* CtrlSegment;
 @property (nonatomic,strong) UIScrollView *CtrlScroll;
 
-- (id)init;
+//- (id)init;
 - (void)ValChanged:(UISegmentedControl*)sender;
 - (void)SelectDistrict:(NSInteger)intDistrictIndex;
 - (void)CreateScenes:(NSString*)strSelDistrict;
-- (void)viewDidLoad;
+//- (void)viewDidLoad;
 @end

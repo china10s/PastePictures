@@ -11,14 +11,22 @@
 #import "HPublic.h"
 #import "ViewScrollImage.h"
 
+@interface UIScrollViewPictures : UIScrollView
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event;
+
+@end
+
+
+
+
 @interface VCPictures : UIViewController<UIScrollViewDelegate,VCPicturesSwitchDelegate>
 @property (nonatomic,strong) UITapGestureRecognizer*        GestsingleTapRecon;
 @property (nonatomic,strong) UIImageView*                   CtrlViewLeft;
 @property (nonatomic,strong) UIImageView*                   CtrlViewMiddle;
 @property (nonatomic,strong) UIImageView*                   CtrlViewRight;
-@property (nonatomic,strong) UIScrollView*                  CtrlScrollTmp;
 @property (nonatomic,strong) UIPageControl*                 CtrlPage;
-@property (nonatomic,strong) UIScrollView*                  CtrlScroll;
+@property (nonatomic,strong) UIScrollViewPictures*          CtrlScroll;
 @property (nonatomic,strong) UILabel*                       CtrlLabel;
 @property (nonatomic,strong) ViewInfo*                      CtrlViewInfo;
 @property (nonatomic,strong) NSMutableArray*                nImagesArry;
@@ -26,8 +34,8 @@
 @property (nonatomic,assign) NSInteger                      iCurIndex;
 @property (nonatomic,assign) NSInteger                      iImageNum;
 @property (nonatomic,retain) id<VCPicturesSwitchDelegate>   SwitchDelegate;
-
-@property (nonatomic,strong) ViewScrollImage* img;
+@property (nonatomic,strong) ViewScrollImage*               img;
+@property (nonatomic,strong) NSString*                      strCurName;
 
 //初始化self.view
 - (void)IniSelfView;
@@ -37,12 +45,11 @@
 - (void)IniUiPage;
 //初始化图片框
 - (void)IniUiImage;
-//初始化文件名
-- (void)IniUiLable;
 //滑动结束事件
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 - (void)reloadImage;
 - (void)SetCurrentPicture:(NSString*)strPicMainName nPicNum:(NSInteger)nPicNum;
-//- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index;
 - (void)HandleSingleTap:(UITapGestureRecognizer*)Reco;
+//设置当前图片名称
+- (void)SetCurName:(NSString*)strPicMainName;
 @end

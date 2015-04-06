@@ -19,6 +19,7 @@
 @property (nonatomic,strong)UIView      *ctrlUpBar;
 @property (nonatomic,strong)UIView      *ctrlDownBar;
 @property (nonatomic,strong)NSString    *strLabel;
+@property (nonatomic,strong)UILabel     *ctrlLabelName;
 @property (nonatomic,strong)UILabel     *ctrlLabelInfo;
 @property (nonatomic,strong)UIButton    *ctrlButtonReturn;
 @property (nonatomic,retain)id<VCPicturesSwitchDelegate> delBack;
@@ -29,4 +30,6 @@
 - (void)IniButton;
 - (void)ButtonClick:(id)sender;
 - (void)ClickToVisableChange;
+//显示图片名称
+- (void)SetLabelText:(NSString*)strName;
 @end

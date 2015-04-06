@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>jingzhou</key>
+	<string>荆州</string>
+	<key>shashi</key>
+	<string>沙市</string>
+	<key>xuanmiaoguan</key>
+	<string>玄妙观</string>
+	<key>kaiyuanguan</key>
+	<string>开元观</string>
+	<key>shangchang</key>
+	<string>商场</string>
+	<key>beidamen</key>
+	<string>北大门</string>
+	<key>jiangbian</key>
+	<string>江边</string>
+	<key>bianhe</key>
+	<string>便河</string>
+	<key>gongyuan</key>
+	<string>公园</string>
+	<key>jiexiang</key>
+	<string>街巷</string>
+	<key>niaokan</key>
+	<string>鸟瞰</string>
+	<key>shangshe</key>
+	<string>商社</string>
+	<key>xuexiao</key>
+	<string>学校</string>
+	<key>yundong</key>
+	<string>运动会</string>
+</dict>
+</plist>

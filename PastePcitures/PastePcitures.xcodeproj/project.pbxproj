@@ -12,11 +12,15 @@
 		B632E10D1AC83AB20075BD92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E10C1AC83AB20075BD92 /* ViewController.m */; };
 		B632E1101AC83AB20075BD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B632E10E1AC83AB20075BD92 /* Main.storyboard */; };
 		B632E1121AC83AB20075BD92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B632E1111AC83AB20075BD92 /* Images.xcassets */; };
-		B632E1151AC83AB20075BD92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B632E1131AC83AB20075BD92 /* LaunchScreen.xib */; };
 		B632E1211AC83AB20075BD92 /* PastePcituresTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E1201AC83AB20075BD92 /* PastePcituresTests.m */; };
 		B632E1321AC83D530075BD92 /* VCPictures.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E1301AC83D530075BD92 /* VCPictures.m */; };
 		B632E1331AC83D530075BD92 /* VCPictures.xib in Resources */ = {isa = PBXBuildFile; fileRef = B632E1311AC83D530075BD92 /* VCPictures.xib */; };
 		B632E1371AC83D7A0075BD92 /* VCSelected.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E1351AC83D7A0075BD92 /* VCSelected.m */; };
+		B69A2D781AD0F5E1000A4E6D /* launchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = B69A2D771AD0F5E1000A4E6D /* launchimage.png */; };
+		B6B23C7A1ACFFD6000E26A0D /* Chinese2English.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6B23C791ACFFD6000E26A0D /* Chinese2English.plist */; };
+		B6B23C811AD00FEB00E26A0D /* VCLaunchScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B23C7F1AD00FEB00E26A0D /* VCLaunchScreen.m */; };
+		B6B23C821AD00FEB00E26A0D /* VCLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B23C801AD00FEB00E26A0D /* VCLaunchScreen.xib */; };
+		B6B23C871AD068DA00E26A0D /* PicMetaData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6B23C861AD068DA00E26A0D /* PicMetaData.plist */; };
 		B6B4B7E71ACDDABF003A8E25 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B6B4B7E61ACDDABF003A8E25 /* icon.png */; };
 		B6B4B7F21ACDEB3C003A8E25 /* jingzhou_beidamen1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6B4B7E91ACDEB3C003A8E25 /* jingzhou_beidamen1.jpg */; };
 		B6B4B7F31ACDEB3C003A8E25 /* jingzhou_beidamen2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6B4B7EA1ACDEB3C003A8E25 /* jingzhou_beidamen2.jpg */; };
@@ -60,6 +64,7 @@
 		B6B4B83B1ACDF351003A8E25 /* icon_btn_rtn.png in Resources */ = {isa = PBXBuildFile; fileRef = B6B4B83A1ACDF351003A8E25 /* icon_btn_rtn.png */; };
 		B6B4B83E1ACE0154003A8E25 /* ViewScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B4B83D1ACE0154003A8E25 /* ViewScrollImage.m */; };
 		B6B800B21AC9FA15007E99B0 /* shashi_yundong1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6B800A21AC9FA15007E99B0 /* shashi_yundong1.jpg */; };
+		B6C162421AD0D5AC00768FB8 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C162411AD0D5AC00768FB8 /* icon-120.png */; };
 		B6C54A891ACC918F00208D3D /* ViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C54A881ACC918F00208D3D /* ViewInfo.m */; };
 		B6DF47A31AC853F000ECD60E /* CDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF47A21AC853F000ECD60E /* CDataReader.m */; };
 		B6DF47A51AC8946000ECD60E /* VCSelected.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DF47A41AC8946000ECD60E /* VCSelected.xib */; };
@@ -92,7 +97,6 @@
 		B632E10C1AC83AB20075BD92 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B632E10F1AC83AB20075BD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B632E1111AC83AB20075BD92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B632E1141AC83AB20075BD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B632E11A1AC83AB20075BD92 /* PastePcituresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PastePcituresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B632E11F1AC83AB20075BD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B632E1201AC83AB20075BD92 /* PastePcituresTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PastePcituresTests.m; sourceTree = "<group>"; };
@@ -101,6 +105,12 @@
 		B632E1311AC83D530075BD92 /* VCPictures.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCPictures.xib; sourceTree = "<group>"; };
 		B632E1341AC83D7A0075BD92 /* VCSelected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSelected.h; sourceTree = "<group>"; };
 		B632E1351AC83D7A0075BD92 /* VCSelected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSelected.m; sourceTree = "<group>"; };
+		B69A2D771AD0F5E1000A4E6D /* launchimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimage.png; sourceTree = "<group>"; };
+		B6B23C791ACFFD6000E26A0D /* Chinese2English.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Chinese2English.plist; sourceTree = "<group>"; };
+		B6B23C7E1AD00FEB00E26A0D /* VCLaunchScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCLaunchScreen.h; path = PastePcitures/VCLaunchScreen.h; sourceTree = "<group>"; };
+		B6B23C7F1AD00FEB00E26A0D /* VCLaunchScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLaunchScreen.m; path = PastePcitures/VCLaunchScreen.m; sourceTree = "<group>"; };
+		B6B23C801AD00FEB00E26A0D /* VCLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VCLaunchScreen.xib; path = PastePcitures/VCLaunchScreen.xib; sourceTree = "<group>"; };
+		B6B23C861AD068DA00E26A0D /* PicMetaData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PicMetaData.plist; sourceTree = "<group>"; };
 		B6B4B7E61ACDDABF003A8E25 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		B6B4B7E91ACDEB3C003A8E25 /* jingzhou_beidamen1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jingzhou_beidamen1.jpg; sourceTree = "<group>"; };
 		B6B4B7EA1ACDEB3C003A8E25 /* jingzhou_beidamen2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jingzhou_beidamen2.jpg; sourceTree = "<group>"; };
@@ -145,6 +155,7 @@
 		B6B4B83C1ACE0154003A8E25 /* ViewScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewScrollImage.h; sourceTree = "<group>"; };
 		B6B4B83D1ACE0154003A8E25 /* ViewScrollImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewScrollImage.m; sourceTree = "<group>"; };
 		B6B800A21AC9FA15007E99B0 /* shashi_yundong1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shashi_yundong1.jpg; sourceTree = "<group>"; };
+		B6C162411AD0D5AC00768FB8 /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120.png"; sourceTree = "<group>"; };
 		B6C54A871ACC918F00208D3D /* ViewInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewInfo.h; sourceTree = "<group>"; };
 		B6C54A881ACC918F00208D3D /* ViewInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewInfo.m; sourceTree = "<group>"; };
 		B6C54A8A1ACCB19600208D3D /* HPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HPublic.h; path = ../HPublic.h; sourceTree = "<group>"; };
@@ -187,9 +198,11 @@
 		B60023DF1ACB719C003E1165 /* DataPersist */ = {
 			isa = PBXGroup;
 			children = (
+				B6B23C791ACFFD6000E26A0D /* Chinese2English.plist */,
 				B6DF47A61AC89E4B00ECD60E /* Dis2Sce2Pic.plist */,
 				B6DF47A11AC853F000ECD60E /* CDataReader.h */,
 				B6DF47A21AC853F000ECD60E /* CDataReader.m */,
+				B6B23C861AD068DA00E26A0D /* PicMetaData.plist */,
 			);
 			name = DataPersist;
 			sourceTree = "<group>";
@@ -223,8 +236,10 @@
 		B632E0F81AC83AB20075BD92 = {
 			isa = PBXGroup;
 			children = (
-				B60023DF1ACB719C003E1165 /* DataPersist */,
+				B69A2D771AD0F5E1000A4E6D /* launchimage.png */,
 				B6B8008A1AC9FA15007E99B0 /* Resources */,
+				B60023DF1ACB719C003E1165 /* DataPersist */,
+				B6B23C851AD05A7100E26A0D /* VCLaunchScreen */,
 				B6DF47B21AC8C22A00ECD60E /* Frameworks */,
 				B632E12B1AC83CD80075BD92 /* VCSelected */,
 				B632E12A1AC83CB80075BD92 /* VCPictures */,
@@ -252,7 +267,6 @@
 				B632E10C1AC83AB20075BD92 /* ViewController.m */,
 				B632E10E1AC83AB20075BD92 /* Main.storyboard */,
 				B632E1111AC83AB20075BD92 /* Images.xcassets */,
-				B632E1131AC83AB20075BD92 /* LaunchScreen.xib */,
 				B632E1041AC83AB20075BD92 /* Supporting Files */,
 			);
 			path = PastePcitures;
@@ -308,6 +322,16 @@
 			name = VCSelected;
 			sourceTree = "<group>";
 		};
+		B6B23C851AD05A7100E26A0D /* VCLaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B6B23C801AD00FEB00E26A0D /* VCLaunchScreen.xib */,
+				B6B23C7E1AD00FEB00E26A0D /* VCLaunchScreen.h */,
+				B6B23C7F1AD00FEB00E26A0D /* VCLaunchScreen.m */,
+			);
+			name = VCLaunchScreen;
+			sourceTree = "<group>";
+		};
 		B6B4B7E81ACDEB2A003A8E25 /* beidamen */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +375,7 @@
 		B6B8008A1AC9FA15007E99B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B6C162411AD0D5AC00768FB8 /* icon-120.png */,
 				B6B4B83A1ACDF351003A8E25 /* icon_btn_rtn.png */,
 				B6B4B7E61ACDDABF003A8E25 /* icon.png */,
 				B6C54A8A1ACCB19600208D3D /* HPublic.h */,
@@ -554,7 +579,9 @@
 			files = (
 				B6B4B7FA1ACDEB3C003A8E25 /* jingzhou_beidamen9.jpg in Resources */,
 				B6B4B7F61ACDEB3C003A8E25 /* jingzhou_beidamen5.jpg in Resources */,
+				B6B23C7A1ACFFD6000E26A0D /* Chinese2English.plist in Resources */,
 				B6B4B7F41ACDEB3C003A8E25 /* jingzhou_beidamen3.jpg in Resources */,
+				B69A2D781AD0F5E1000A4E6D /* launchimage.png in Resources */,
 				B6B4B81E1ACDEC9A003A8E25 /* shashi_jiexiang2.jpg in Resources */,
 				B6B4B8291ACDECAD003A8E25 /* shashi_niaokan2.jpg in Resources */,
 				B6B4B8341ACDECF3003A8E25 /* shashi_shangshe2.jpg in Resources */,
@@ -566,6 +593,7 @@
 				B6B4B8251ACDEC9A003A8E25 /* shashi_jiexiang9.jpg in Resources */,
 				B6B4B80F1ACDEC04003A8E25 /* shashi_gongyuan3.jpg in Resources */,
 				B6DF47A71AC89E4B00ECD60E /* Dis2Sce2Pic.plist in Resources */,
+				B6B23C821AD00FEB00E26A0D /* VCLaunchScreen.xib in Resources */,
 				B6B4B8381ACDECF3003A8E25 /* shashi_shangshe6.jpg in Resources */,
 				B6B4B8351ACDECF3003A8E25 /* shashi_shangshe3.jpg in Resources */,
 				B6B4B7F51ACDEB3C003A8E25 /* jingzhou_beidamen4.jpg in Resources */,
@@ -574,17 +602,18 @@
 				B6B4B7FD1ACDEB58003A8E25 /* jingzhou_kaiyuanguan1.jpg in Resources */,
 				B6B4B8331ACDECF3003A8E25 /* shashi_shangshe1.jpg in Resources */,
 				B6B4B8131ACDEC44003A8E25 /* shashi_jiangbian2.jpg in Resources */,
+				B6B23C871AD068DA00E26A0D /* PicMetaData.plist in Resources */,
 				B6B4B7F91ACDEB3C003A8E25 /* jingzhou_beidamen8.jpg in Resources */,
 				B6B4B8091ACDEBF0003A8E25 /* shashi_bianhe3.jpg in Resources */,
 				B6B4B83B1ACDF351003A8E25 /* icon_btn_rtn.png in Resources */,
 				B6DF47A51AC8946000ECD60E /* VCSelected.xib in Resources */,
 				B6B4B8211ACDEC9A003A8E25 /* shashi_jiexiang5.jpg in Resources */,
-				B632E1151AC83AB20075BD92 /* LaunchScreen.xib in Resources */,
 				B6B4B8241ACDEC9A003A8E25 /* shashi_jiexiang8.jpg in Resources */,
 				B6B4B8371ACDECF3003A8E25 /* shashi_shangshe5.jpg in Resources */,
 				B6B4B7F31ACDEB3C003A8E25 /* jingzhou_beidamen2.jpg in Resources */,
 				B6B4B8081ACDEBF0003A8E25 /* shashi_bianhe2.jpg in Resources */,
 				B6B4B8221ACDEC9A003A8E25 /* shashi_jiexiang6.jpg in Resources */,
+				B6C162421AD0D5AC00768FB8 /* icon-120.png in Resources */,
 				B6B4B81D1ACDEC9A003A8E25 /* shashi_jiexiang1.jpg in Resources */,
 				B6B4B7E71ACDDABF003A8E25 /* icon.png in Resources */,
 				B6B4B7F71ACDEB3C003A8E25 /* jingzhou_beidamen6.jpg in Resources */,
@@ -622,6 +651,7 @@
 				B632E1321AC83D530075BD92 /* VCPictures.m in Sources */,
 				B6DF47AD1AC8BCAE00ECD60E /* FeBasicAnimationBlock.m in Sources */,
 				B632E10D1AC83AB20075BD92 /* ViewController.m in Sources */,
+				B6B23C811AD00FEB00E26A0D /* VCLaunchScreen.m in Sources */,
 				B6B4B83E1ACE0154003A8E25 /* ViewScrollImage.m in Sources */,
 				B6DF47B11AC8BEFE00ECD60E /* FeRippleButton.m in Sources */,
 				B632E1371AC83D7A0075BD92 /* VCSelected.m in Sources */,
@@ -657,14 +687,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B632E1131AC83AB20075BD92 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B632E1141AC83AB20075BD92 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -672,6 +694,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon.png;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -703,7 +727,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "75f31955-7787-4922-a94b-968ab5226d97";
@@ -715,6 +739,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon.png;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -740,7 +766,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "75f31955-7787-4922-a94b-968ab5226d97";
 				SDKROOT = iphoneos;
@@ -755,6 +781,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PastePcitures/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -768,6 +795,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PastePcitures/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

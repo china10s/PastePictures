@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "VCPictures.h"
 #import "VCSelected.h"
+#import "VCLaunchScreen.h"
 
 @interface ViewController : UIViewController<VCSeletedSwitchDelegate,VCPicturesSwitchDelegate>
-
-@property (nonatomic,strong)VCSelected* vcSelected;
-@property (nonatomic,strong)VCPictures* vcPictures;
+@property (nonatomic,strong)VCLaunchScreen*     vcLaunchScreen;
+@property (nonatomic,strong)VCSelected*         vcSelected;
+@property (nonatomic,strong)VCPictures*         vcPictures;
 
 //切换controllor
 - (void)ReplaceControllor:(ViewController*)fromCont toCont:(ViewController*)toCont leftTurn:(BOOL)leftTurn  finishedBlock:(void(^)(void))finishedBlock ;

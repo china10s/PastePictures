@@ -17,24 +17,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //启动页面
+    _vcLaunchScreen = [[VCLaunchScreen alloc] init];
+    [[NSBundle mainBundle] loadNibNamed:@"VCLaunchScreen" owner:_vcLaunchScreen options:nil];
+    [_vcLaunchScreen viewDidLoad];
+    [self.view addSubview:_vcLaunchScreen.view];
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(viewRealLoad:) userInfo:nil repeats:YES] ;
+}
+
+- (void)viewRealLoad:(NSTimer*)timer{
+    [_vcLaunchScreen.view removeFromSuperview];
     //1】初始化照片viewControl
-    _vcPictures = [[VCPictures alloc] init];
-    [[NSBundle mainBundle] loadNibNamed:@"VCPictures" owner:_vcPictures options:nil];
+    _vcPictures = [[VCPictures alloc] initWithNibName:@"VCPictures" bundle:[NSBundle mainBundle]];
     _vcPictures.SwitchDelegate = self;
-    //_vcPictures.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:_vcPictures];
     //2】初始化选择viewControl
-    _vcSelected = [[VCSelected alloc] init];
-    [[NSBundle mainBundle] loadNibNamed:@"VCSelected" owner:_vcSelected options:nil];
+    _vcSelected = [[VCSelected alloc] initWithNibName:@"VCSelected" bundle:[NSBundle mainBundle]];
     _vcSelected.SwitchDelegate = self;
     [self addChildViewController:_vcSelected];
     //3】将选择Control首先加载上去
     [self.view addSubview:_vcSelected.view];
-    [_vcSelected viewDidLoad];
-    [_vcPictures viewDidLoad];
+    [timer invalidate];
 }
-
-
 
 
 - (void)didReceiveMemoryWarning {
@@ -47,8 +51,10 @@
 - (void)Seleted:(NSString*)strDistrictName strSceneName:(NSString*)strSceneName{
     NSString* strPicName = [[NSString alloc] initWithFormat:@"%@_%@",strDistrictName,strSceneName];
     NSInteger nPicNum = [CDataReader GetNumberOfPictures:strDistrictName strSceName:strSceneName];
+    [_vcPictures SetCurrentPicture:strPicName nPicNum:nPicNum];
+    [_vcPictures SetCurName:[NSString stringWithFormat:@"%@ %@",[CDataReader GetChByEn:strDistrictName],[CDataReader GetChByEn:strSceneName]]];
     [self ReplaceControllor:(ViewController*)_vcSelected toCont:(ViewController*)_vcPictures leftTurn:TRUE finishedBlock:^(){
-        [_vcPictures SetCurrentPicture:strPicName nPicNum:nPicNum];
+        //[_vcPictures SetCurrentPicture:strPicName nPicNum:nPicNum];
     }];
 }
 
@@ -74,10 +80,8 @@
             }
             [toCont didMoveToParentViewController:self];
             [fromCont willMoveToParentViewController:nil];
-            //[fromCont removeFromParentViewController];
         }
     }];
 }
-
 
 @end
