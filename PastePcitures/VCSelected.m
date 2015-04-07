@@ -8,6 +8,7 @@
 
 #import "VCSelected.h"
 #import "CDataReader.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define KButtonHeight 80
 
@@ -79,31 +80,24 @@
 
 - (void)SelectDistrict:(NSInteger)intDistrictIndex{
     //清空所有按钮
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.4f];/*
-    for (int i =0; i < [_CtrlScroll subviews].count; ++i) {
-        UIView* viewTmp = [_CtrlScroll.subviews objectAtIndex:i];
-        viewTmp.alpha = 0;
-        viewTmp.frame.size=CGSizeZero;
-    }*/
-    for(UIView * viewTmp in [_CtrlScroll subviews]){
-        viewTmp.alpha = 0;
-        [viewTmp removeFromSuperview];
-    }
-    _intScenesCount = 0;
-    _strCurDicName =[_arryDistrict objectAtIndex:intDistrictIndex];
-    NSMutableArray* arry = [CDataReader GetEnScenesOfDistrict:_strCurDicName];
-    for (NSString* strTmpName in arry) {
-        [self CreateScenes:strTmpName ];
-    }
-    [UIView commitAnimations];
+    [_CtrlScroll setContentOffset:CGPointZero];
+    [UIView animateWithDuration:0.5f animations:^(void){
+        for(UIView * viewTmp in [_CtrlScroll subviews]){
+            viewTmp.alpha = 0;
+            [viewTmp removeFromSuperview];
+        }
+        _intScenesCount = 0;
+        _strCurDicName =[_arryDistrict objectAtIndex:intDistrictIndex];
+        NSMutableArray* arry = [CDataReader GetEnScenesOfDistrict:_strCurDicName];
+        for (NSString* strTmpName in arry) {
+            [self CreateScenes:strTmpName ];
+        }
+    }];
 }
 
 - (void)CreateScenes:(NSString*)strSelDistrict{
-    //FeRippleButton * a_button=[[FeRippleButton alloc] initWithFrame:CGRectMake(0, 0,
-                //self.view.frame.size.width -10 , KButtonHeight)];
     UIButton * a_button=[[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width,
-                                                                   _intScenesCount*(KButtonHeight+2),
+                                                                   10 + _intScenesCount*(KButtonHeight+2),
                                                                    self.view.frame.size.width -10 , KButtonHeight)];
     a_button.tag = _intScenesCount;
     a_button.center = CGPointMake(self.view.center.x-20, 50 + _intScenesCount*(KButtonHeight+2));
@@ -112,13 +106,17 @@
     a_button.backgroundColor = [UIColor colorWithRed:47.0f/255.0f green:134.0f/255.0f blue:235.0f/255.0f alpha:1];
     [a_button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     a_button.titleLabel.font = [UIFont boldSystemFontOfSize:22];
-    
-    // Configure
-    //a_button.rippleColor = [UIColor colorWithRed:33.0f/255.0f green:101.0f/255.0f blue:196.0f/255.0f alpha:1];
-    //a_button.rippleBackgroundColor = [UIColor colorWithRed:42.0f/255.0f green:119.0f/255.0f blue:218.0f/255.0f alpha:1];
     [a_button addTarget:self action:@selector(SceneSelected:) forControlEvents:UIControlEventTouchUpInside];
     [_CtrlScroll addSubview:a_button];
     _CtrlScroll.contentSize = CGSizeMake(_CtrlScroll.contentSize.width,++_intScenesCount*(KButtonHeight+2) + KButtonHeight/2 );
+    
+    a_button.layer.shadowOffset=CGSizeMake(1, 1);
+    a_button.layer.shadowRadius=3.0;
+    a_button.layer.shadowColor=[UIColor whiteColor].CGColor;
+    a_button.layer.shadowOpacity=.8f;
+    a_button.layer.borderColor=[UIColor blackColor].CGColor;
+    a_button.layer.borderWidth=2.0;
+    a_button.layer.cornerRadius=10.0;
 }
 
 - (void)SceneSelected:(UIButton*)sender
