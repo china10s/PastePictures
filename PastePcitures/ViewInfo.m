@@ -32,7 +32,7 @@
     
     //up
     _ctrlUpBar = [[UIView alloc] init];
-    [_ctrlUpBar setBackgroundColor:[UIColor colorWithWhite:0.5f alpha:0.5f]];
+    [_ctrlUpBar setBackgroundColor:[UIColor colorWithWhite:0.5f alpha:0.8f]];
     [_ctrlUpBar setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_superView addSubview:_ctrlUpBar];
     [_superView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_ctrlUpBar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_superView,_ctrlUpBar)]];
@@ -40,7 +40,7 @@
     
     //down
     _ctrlDownBar = [[UIView alloc] init];
-    [_ctrlDownBar setBackgroundColor:[UIColor colorWithWhite:0.5f alpha:0.5f]];
+    [_ctrlDownBar setBackgroundColor:[UIColor colorWithWhite:0.5f alpha:0.8f]];
     [_ctrlDownBar setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_superView addSubview:_ctrlDownBar];
     [_superView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_ctrlDownBar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_superView,_ctrlDownBar)]];
@@ -54,6 +54,7 @@
     //KVO_strLabel
     [_ctrlLabelName setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_ctrlUpBar addSubview:_ctrlLabelName];
+    [_ctrlUpBar setAlpha:0.8f];
     [_ctrlUpBar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-70-[_ctrlLabelName]-70-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_ctrlUpBar,_ctrlLabelName)]];
     [_ctrlUpBar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[_ctrlLabelName]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_ctrlUpBar,_ctrlLabelName)]];
     _ctrlLabelName.textAlignment = NSTextAlignmentCenter;
@@ -93,8 +94,8 @@
         _isBarShow = FALSE;
     }
     else{
-        [_ctrlUpBar setAlpha:0.5f];
-        [_ctrlDownBar setAlpha:0.5f];
+        [_ctrlUpBar setAlpha:0.8f];
+        [_ctrlDownBar setAlpha:0.8f];
         _isBarShow = TRUE;
     }
 

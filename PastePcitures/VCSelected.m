@@ -79,7 +79,15 @@
 
 - (void)SelectDistrict:(NSInteger)intDistrictIndex{
     //清空所有按钮
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.4f];/*
+    for (int i =0; i < [_CtrlScroll subviews].count; ++i) {
+        UIView* viewTmp = [_CtrlScroll.subviews objectAtIndex:i];
+        viewTmp.alpha = 0;
+        viewTmp.frame.size=CGSizeZero;
+    }*/
     for(UIView * viewTmp in [_CtrlScroll subviews]){
+        viewTmp.alpha = 0;
         [viewTmp removeFromSuperview];
     }
     _intScenesCount = 0;
@@ -88,12 +96,14 @@
     for (NSString* strTmpName in arry) {
         [self CreateScenes:strTmpName ];
     }
+    [UIView commitAnimations];
 }
 
 - (void)CreateScenes:(NSString*)strSelDistrict{
     //FeRippleButton * a_button=[[FeRippleButton alloc] initWithFrame:CGRectMake(0, 0,
                 //self.view.frame.size.width -10 , KButtonHeight)];
-    UIButton * a_button=[[UIButton alloc] initWithFrame:CGRectMake(0, 0,
+    UIButton * a_button=[[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width,
+                                                                   _intScenesCount*(KButtonHeight+2),
                                                                    self.view.frame.size.width -10 , KButtonHeight)];
     a_button.tag = _intScenesCount;
     a_button.center = CGPointMake(self.view.center.x-20, 50 + _intScenesCount*(KButtonHeight+2));

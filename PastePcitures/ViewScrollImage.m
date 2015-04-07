@@ -53,4 +53,20 @@
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
     return TRUE;
 }
+
+//放大缩小
+- (void)zoomInOrOut{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.2f];
+    
+    if(abs([_CtrlScrollView zoomScale] - 1) < 0.01){
+        _CtrlScrollView.zoomScale = _CtrlScrollView.maximumZoomScale;
+    }
+    else{
+        _CtrlScrollView.zoomScale = 1;
+    }
+    [UIView commitAnimations];
+}
+
+
 @end

@@ -22,6 +22,7 @@
 
 @interface VCPictures : UIViewController<UIScrollViewDelegate,VCPicturesSwitchDelegate>
 @property (nonatomic,strong) UITapGestureRecognizer*        GestsingleTapRecon;
+@property (nonatomic,strong) UITapGestureRecognizer*        GestDoubleTapRecon;
 @property (nonatomic,strong) UIImageView*                   CtrlViewLeft;
 @property (nonatomic,strong) UIImageView*                   CtrlViewMiddle;
 @property (nonatomic,strong) UIImageView*                   CtrlViewRight;
@@ -50,6 +51,7 @@
 - (void)reloadImage;
 - (void)SetCurrentPicture:(NSString*)strPicMainName nPicNum:(NSInteger)nPicNum;
 - (void)HandleSingleTap:(UITapGestureRecognizer*)Reco;
+- (void)HandleDoubleTap:(UITapGestureRecognizer*)Reco;
 //设置当前图片名称
 - (void)SetCurName:(NSString*)strPicMainName;
 @end

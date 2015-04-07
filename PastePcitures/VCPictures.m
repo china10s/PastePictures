@@ -36,7 +36,6 @@
     [self IniUiScroll];
     [self IniUiPage];
     [self IniUiImage];
-    //[self IniUiLable];
     [self IniViewInfo];
     [self IniGesture];
 }
@@ -66,7 +65,12 @@
 - (void)IniGesture{
     _GestsingleTapRecon = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HandleSingleTap:)];
     _GestsingleTapRecon.numberOfTapsRequired = 1;
+    
+    _GestDoubleTapRecon = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HandleDoubleTap:)];
+    _GestDoubleTapRecon.numberOfTapsRequired = 2;
+    [_GestsingleTapRecon requireGestureRecognizerToFail:_GestDoubleTapRecon];
     [self.view addGestureRecognizer:_GestsingleTapRecon];
+    [self.view addGestureRecognizer:_GestDoubleTapRecon];
 }
 
 
@@ -86,15 +90,18 @@
     _strCurName = strPicMainName;
 }
 
+//初始化自己窗体大小
 - (void)IniSelfView{
     self.view.frame = _rcScreen;
 }
 
+//初始化照片信息类
 - (void)IniViewInfo{
     _CtrlViewInfo = [[ViewInfo alloc]initWithFrame:_rcScreen superView:self.view];
     _CtrlViewInfo.delBack = self;
 }
 
+//图片界面返回
 - (void)PicSwitchBack{
     [_SwitchDelegate PicSwitchBack];
 }
@@ -156,6 +163,7 @@
     _CtrlPage.currentPage = _iCurIndex;
 }
 
+//重新加载图片
 - (void)reloadImage{
     CGPoint offset=[_CtrlScroll contentOffset];
     int ileftImageIndex,iRightImageIndex;
@@ -166,10 +174,8 @@
     }
     ileftImageIndex = (_iCurIndex + _iImageNum -1)%_iImageNum;
     iRightImageIndex = (_iCurIndex +1)%_iImageNum;
-    //_CtrlViewMiddle.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:_iCurIndex]];
     _CtrlViewLeft.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:ileftImageIndex]];
     _CtrlViewRight.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:iRightImageIndex]];
-    
     _img.CtrlImgView.image=[UIImage imageNamed:[_nImagesArry objectAtIndex:_iCurIndex]];
     [_img.CtrlScrollView setZoomScale:1];
     
@@ -179,6 +185,10 @@
 
 - (void)HandleSingleTap:(UITapGestureRecognizer*)Reco{
     [_CtrlViewInfo ClickToVisableChange];
+}
+
+- (void)HandleDoubleTap:(UITapGestureRecognizer*)Reco{
+    [_img zoomInOrOut];
 }
 
 @end

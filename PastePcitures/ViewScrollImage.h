@@ -14,4 +14,5 @@
 @property (nonatomic,strong)UIScrollView *CtrlScrollView;
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView;
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event;
+- (void)zoomInOrOut;
 @end

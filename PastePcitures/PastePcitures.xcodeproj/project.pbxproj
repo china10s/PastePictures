@@ -231,7 +231,6 @@
 		B632E0F81AC83AB20075BD92 = {
 			isa = PBXGroup;
 			children = (
-				B6C7C0D21AD3FFB700E69AC8 /* lscr.xib */,
 				B6B8008A1AC9FA15007E99B0 /* Resources */,
 				B60023DF1ACB719C003E1165 /* DataPersist */,
 				B6B23C851AD05A7100E26A0D /* VCLaunchScreen */,
@@ -320,6 +319,7 @@
 		B6B23C851AD05A7100E26A0D /* VCLaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B6C7C0D21AD3FFB700E69AC8 /* lscr.xib */,
 			);
 			name = VCLaunchScreen;
 			sourceTree = "<group>";
