@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "VCPictures.h"
-#import "VCSelected.h"
-#import "VCLaunchScreen.h"
+#import "VCSelected.h" 
 
 @interface ViewController : UIViewController<VCSeletedSwitchDelegate,VCPicturesSwitchDelegate>
-@property (nonatomic,strong)VCLaunchScreen*     vcLaunchScreen;
 @property (nonatomic,strong)VCSelected*         vcSelected;
 @property (nonatomic,strong)VCPictures*         vcPictures;
 

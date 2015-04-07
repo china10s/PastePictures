@@ -16,10 +16,7 @@
 		B632E1321AC83D530075BD92 /* VCPictures.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E1301AC83D530075BD92 /* VCPictures.m */; };
 		B632E1331AC83D530075BD92 /* VCPictures.xib in Resources */ = {isa = PBXBuildFile; fileRef = B632E1311AC83D530075BD92 /* VCPictures.xib */; };
 		B632E1371AC83D7A0075BD92 /* VCSelected.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E1351AC83D7A0075BD92 /* VCSelected.m */; };
-		B69A2D781AD0F5E1000A4E6D /* launchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = B69A2D771AD0F5E1000A4E6D /* launchimage.png */; };
 		B6B23C7A1ACFFD6000E26A0D /* Chinese2English.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6B23C791ACFFD6000E26A0D /* Chinese2English.plist */; };
-		B6B23C811AD00FEB00E26A0D /* VCLaunchScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B23C7F1AD00FEB00E26A0D /* VCLaunchScreen.m */; };
-		B6B23C821AD00FEB00E26A0D /* VCLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B23C801AD00FEB00E26A0D /* VCLaunchScreen.xib */; };
 		B6B23C871AD068DA00E26A0D /* PicMetaData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6B23C861AD068DA00E26A0D /* PicMetaData.plist */; };
 		B6B4B7E71ACDDABF003A8E25 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B6B4B7E61ACDDABF003A8E25 /* icon.png */; };
 		B6B4B7F21ACDEB3C003A8E25 /* jingzhou_beidamen1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6B4B7E91ACDEB3C003A8E25 /* jingzhou_beidamen1.jpg */; };
@@ -66,6 +63,7 @@
 		B6B800B21AC9FA15007E99B0 /* shashi_yundong1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6B800A21AC9FA15007E99B0 /* shashi_yundong1.jpg */; };
 		B6C162421AD0D5AC00768FB8 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C162411AD0D5AC00768FB8 /* icon-120.png */; };
 		B6C54A891ACC918F00208D3D /* ViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C54A881ACC918F00208D3D /* ViewInfo.m */; };
+		B6C7C0D31AD3FFB700E69AC8 /* lscr.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C7C0D21AD3FFB700E69AC8 /* lscr.xib */; };
 		B6DF47A31AC853F000ECD60E /* CDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF47A21AC853F000ECD60E /* CDataReader.m */; };
 		B6DF47A51AC8946000ECD60E /* VCSelected.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DF47A41AC8946000ECD60E /* VCSelected.xib */; };
 		B6DF47A71AC89E4B00ECD60E /* Dis2Sce2Pic.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6DF47A61AC89E4B00ECD60E /* Dis2Sce2Pic.plist */; };
@@ -105,11 +103,7 @@
 		B632E1311AC83D530075BD92 /* VCPictures.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCPictures.xib; sourceTree = "<group>"; };
 		B632E1341AC83D7A0075BD92 /* VCSelected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSelected.h; sourceTree = "<group>"; };
 		B632E1351AC83D7A0075BD92 /* VCSelected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSelected.m; sourceTree = "<group>"; };
-		B69A2D771AD0F5E1000A4E6D /* launchimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimage.png; sourceTree = "<group>"; };
 		B6B23C791ACFFD6000E26A0D /* Chinese2English.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Chinese2English.plist; sourceTree = "<group>"; };
-		B6B23C7E1AD00FEB00E26A0D /* VCLaunchScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCLaunchScreen.h; path = PastePcitures/VCLaunchScreen.h; sourceTree = "<group>"; };
-		B6B23C7F1AD00FEB00E26A0D /* VCLaunchScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLaunchScreen.m; path = PastePcitures/VCLaunchScreen.m; sourceTree = "<group>"; };
-		B6B23C801AD00FEB00E26A0D /* VCLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VCLaunchScreen.xib; path = PastePcitures/VCLaunchScreen.xib; sourceTree = "<group>"; };
 		B6B23C861AD068DA00E26A0D /* PicMetaData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PicMetaData.plist; sourceTree = "<group>"; };
 		B6B4B7E61ACDDABF003A8E25 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		B6B4B7E91ACDEB3C003A8E25 /* jingzhou_beidamen1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jingzhou_beidamen1.jpg; sourceTree = "<group>"; };
@@ -159,6 +153,7 @@
 		B6C54A871ACC918F00208D3D /* ViewInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewInfo.h; sourceTree = "<group>"; };
 		B6C54A881ACC918F00208D3D /* ViewInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewInfo.m; sourceTree = "<group>"; };
 		B6C54A8A1ACCB19600208D3D /* HPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HPublic.h; path = ../HPublic.h; sourceTree = "<group>"; };
+		B6C7C0D21AD3FFB700E69AC8 /* lscr.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = lscr.xib; sourceTree = "<group>"; };
 		B6DF47A11AC853F000ECD60E /* CDataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataReader.h; sourceTree = "<group>"; };
 		B6DF47A21AC853F000ECD60E /* CDataReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataReader.m; sourceTree = "<group>"; };
 		B6DF47A41AC8946000ECD60E /* VCSelected.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCSelected.xib; sourceTree = "<group>"; };
@@ -236,7 +231,7 @@
 		B632E0F81AC83AB20075BD92 = {
 			isa = PBXGroup;
 			children = (
-				B69A2D771AD0F5E1000A4E6D /* launchimage.png */,
+				B6C7C0D21AD3FFB700E69AC8 /* lscr.xib */,
 				B6B8008A1AC9FA15007E99B0 /* Resources */,
 				B60023DF1ACB719C003E1165 /* DataPersist */,
 				B6B23C851AD05A7100E26A0D /* VCLaunchScreen */,
@@ -325,9 +320,6 @@
 		B6B23C851AD05A7100E26A0D /* VCLaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				B6B23C801AD00FEB00E26A0D /* VCLaunchScreen.xib */,
-				B6B23C7E1AD00FEB00E26A0D /* VCLaunchScreen.h */,
-				B6B23C7F1AD00FEB00E26A0D /* VCLaunchScreen.m */,
 			);
 			name = VCLaunchScreen;
 			sourceTree = "<group>";
@@ -581,7 +573,6 @@
 				B6B4B7F61ACDEB3C003A8E25 /* jingzhou_beidamen5.jpg in Resources */,
 				B6B23C7A1ACFFD6000E26A0D /* Chinese2English.plist in Resources */,
 				B6B4B7F41ACDEB3C003A8E25 /* jingzhou_beidamen3.jpg in Resources */,
-				B69A2D781AD0F5E1000A4E6D /* launchimage.png in Resources */,
 				B6B4B81E1ACDEC9A003A8E25 /* shashi_jiexiang2.jpg in Resources */,
 				B6B4B8291ACDECAD003A8E25 /* shashi_niaokan2.jpg in Resources */,
 				B6B4B8341ACDECF3003A8E25 /* shashi_shangshe2.jpg in Resources */,
@@ -593,7 +584,6 @@
 				B6B4B8251ACDEC9A003A8E25 /* shashi_jiexiang9.jpg in Resources */,
 				B6B4B80F1ACDEC04003A8E25 /* shashi_gongyuan3.jpg in Resources */,
 				B6DF47A71AC89E4B00ECD60E /* Dis2Sce2Pic.plist in Resources */,
-				B6B23C821AD00FEB00E26A0D /* VCLaunchScreen.xib in Resources */,
 				B6B4B8381ACDECF3003A8E25 /* shashi_shangshe6.jpg in Resources */,
 				B6B4B8351ACDECF3003A8E25 /* shashi_shangshe3.jpg in Resources */,
 				B6B4B7F51ACDEB3C003A8E25 /* jingzhou_beidamen4.jpg in Resources */,
@@ -626,6 +616,7 @@
 				B6B4B8231ACDEC9A003A8E25 /* shashi_jiexiang7.jpg in Resources */,
 				B6B4B8361ACDECF3003A8E25 /* shashi_shangshe4.jpg in Resources */,
 				B6B800B21AC9FA15007E99B0 /* shashi_yundong1.jpg in Resources */,
+				B6C7C0D31AD3FFB700E69AC8 /* lscr.xib in Resources */,
 				B6B4B82B1ACDECCA003A8E25 /* shashi_xuexiao1.jpg in Resources */,
 				B632E1121AC83AB20075BD92 /* Images.xcassets in Resources */,
 				B632E1331AC83D530075BD92 /* VCPictures.xib in Resources */,
@@ -651,7 +642,6 @@
 				B632E1321AC83D530075BD92 /* VCPictures.m in Sources */,
 				B6DF47AD1AC8BCAE00ECD60E /* FeBasicAnimationBlock.m in Sources */,
 				B632E10D1AC83AB20075BD92 /* ViewController.m in Sources */,
-				B6B23C811AD00FEB00E26A0D /* VCLaunchScreen.m in Sources */,
 				B6B4B83E1ACE0154003A8E25 /* ViewScrollImage.m in Sources */,
 				B6DF47B11AC8BEFE00ECD60E /* FeRippleButton.m in Sources */,
 				B632E1371AC83D7A0075BD92 /* VCSelected.m in Sources */,

@@ -15,18 +15,11 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    //启动页面
-    _vcLaunchScreen = [[VCLaunchScreen alloc] init];
-    [[NSBundle mainBundle] loadNibNamed:@"VCLaunchScreen" owner:_vcLaunchScreen options:nil];
-    [_vcLaunchScreen viewDidLoad];
-    [self.view addSubview:_vcLaunchScreen.view];
-    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(viewRealLoad:) userInfo:nil repeats:YES] ;
 }
 
-- (void)viewRealLoad:(NSTimer*)timer{
-    [_vcLaunchScreen.view removeFromSuperview];
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
     //1】初始化照片viewControl
     _vcPictures = [[VCPictures alloc] initWithNibName:@"VCPictures" bundle:[NSBundle mainBundle]];
     _vcPictures.SwitchDelegate = self;
@@ -37,7 +30,6 @@
     [self addChildViewController:_vcSelected];
     //3】将选择Control首先加载上去
     [self.view addSubview:_vcSelected.view];
-    [timer invalidate];
 }
 
 

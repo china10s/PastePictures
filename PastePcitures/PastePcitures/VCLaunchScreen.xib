@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6750" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
@@ -20,13 +20,13 @@
                         <constraint firstAttribute="width" constant="142" id="LhA-D4-hij"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="47"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Presented by china10s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-dc-ifg">
                     <rect key="frame" x="212" y="265" width="177" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="v1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5U-jT-KHz">
@@ -41,7 +41,9 @@
                 <constraint firstItem="1BN-Zt-5IQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="170" id="jgf-Il-ifc"/>
                 <constraint firstItem="AlH-dc-ifg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="265" id="otc-Md-v6l"/>
                 <constraint firstAttribute="centerX" secondItem="1BN-Zt-5IQ" secondAttribute="centerX" id="oxp-c0-Eem"/>
+                <constraint firstAttribute="centerX" secondItem="AlH-dc-ifg" secondAttribute="centerX" id="qFs-m2-kGF"/>
                 <constraint firstItem="l5U-jT-KHz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="236" id="vJU-O2-oyu"/>
+                <constraint firstAttribute="centerX" secondItem="l5U-jT-KHz" secondAttribute="centerX" id="yQ6-WI-Lxy"/>
             </constraints>
         </view>
     </objects>
